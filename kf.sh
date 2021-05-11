@@ -16,7 +16,7 @@ function update_retention {
 	config_value="$2"
 	bootstrap_server="$3"
     config_name="retention.ms"
-    ./bin/kafka-configs.sh --alter \
+    /etc/kafka/bin/kafka-configs.sh --alter \
       --add-config ${config_name}=${config_value} \
       --bootstrap-server=$bootstrap_server:9092 \
       --topic ${topic_name}
